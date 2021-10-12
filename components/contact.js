@@ -1,7 +1,7 @@
 import styles from './footer.module.css'
 import { useForm } from 'react-hook-form'
 import { useState } from 'react';
-import { emailjs } from 'emailjs-com';
+import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.min.css';
 
@@ -19,35 +19,37 @@ export default function Contact() {
 
     const toastifySuccess = () => {
         toast('Form sent!', {
-          position: 'bottom-right',
-          autoClose: 5000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,  
-          draggable: false,
-          className: 'submit-feedback success',
-          toastId: 'notifyToast'
+            position: 'bottom-right',
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: false,
+            className: 'submit-feedback success',
+            toastId: 'notifyToast'
         });
-      };
+    };
 
     const onSubmit = async (data) => {
-        const { nombre, apellido, email, asunto, mensaje } = data;
+        const { nombre, email, asunto, mensaje } = data;
 
+        const userId = "user_Dlthw2iANtPpFLzyFUEYz";
+        const serviceId = "entremates_contact";
+        const templateId = "template_contact";
 
         try {
             const templateParams = {
                 nombre,
-                apellido,
                 email,
                 asunto,
                 mensaje
             };
 
             await emailjs.send(
-                process.env.NEXT_APP_SERVICE_ID,
-                process.env.NEXT_APP_TEMPLATE_ID,
+                serviceId,
+                templateId,
                 templateParams,
-                process.env.NEXT_APP_USER_ID
+                userId
             );
             reset();
 
@@ -97,32 +99,48 @@ export default function Contact() {
                                     {errors.nombre && <span className='errorMessage'>{errors.nombre.message}</span>}
                                 </div>
                                 <div className="row">
-                                    <input type="text"
-                                        name="lastname"
-                                        placeholder="Apellido"
-                                        className='form-control formInput' />
-                                </div>
-                                <div className="row">
                                     <input type="email"
                                         name="email"
+                                        {...register('email', {
+                                            required: true,
+                                            pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+                                        })}
                                         placeholder="Email"
                                         className='form-control formInput' />
+                                    {errors.email && (
+                                        <span className='errorMessage'>Ingresa un email válido</span>
+                                    )}
                                 </div>
                                 <div className="row">
                                     <input type="text"
-                                        name="subject"
+                                        name="asunto"
+                                        {...register('asunto', {
+                                            required: { value: true, message: 'Ingresa un asunto' },
+                                            maxLength: {
+                                                value: 40,
+                                                message: 'Sobrepasado el límite de caracteres'
+                                            }
+                                        })}
                                         placeholder="Asunto"
                                         className='form-control formInput' />
+                                    {errors.asunto && (
+                                        <span className='errorMessage'>{errors.asunto.message}</span>
+                                    )}
                                 </div>
                                 <div className="row">
                                     <textarea
-                                        name="textarea"
+                                        name="mensaje"
+                                        {...register('mensaje', {
+                                            required: true
+                                        })}
                                         placeholder="Deje su mensaje aquí."
-                                        rows="6"
+                                        rows={6}
                                         className='form-control formInput' />
+                                    {errors.mensaje && <span className='errorMessage'>Ingresa un mensaje</span>}
                                 </div>
                                 <div className="row">
                                     <button
+                                        className="submit-btn"
                                         type="submit">
                                         Enviar
                                     </button>
