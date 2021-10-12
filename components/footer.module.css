@@ -1,0 +1,29 @@
+/* FOOTER  */
+.footer {
+  background-color: #33673B;
+  color: #ffff;
+}
+  
+.row {
+  margin: 0;
+}
+
+.row i{
+  font-size: 50px;
+}
+
+.col {
+  font-size: 60px;
+  font-family: 'Lato';
+  text-align: center;
+}
+
+.col p {
+  font-weight: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+  
+/* FOOTER ENDS */

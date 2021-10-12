@@ -1,0 +1,23 @@
+/* NAV BAR */
+
+#navimportant {
+    background-color: #ffff!important;
+}
+
+.navbrand {
+    font-family: 'Merriweather';
+    font-size: 40px;
+    font-weight: 20px;
+    color: #808080!important;
+}
+
+.navitem {
+    font-size: 18px;
+    padding: 30px;
+}
+
+.navitem:hover {
+    text-decoration: underline;
+}
+
+/* NAV BAR ENDS */
