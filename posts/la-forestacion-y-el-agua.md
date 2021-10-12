@@ -7,7 +7,7 @@ description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor
 ---
 Por **Franco Sotelo**.
 
-![Forestacion](/images/img/forestacion-y-agua.jpg)
+![Forestacion](/images/img/forestacion_y_agua.jpg)
 
 <small>**Pie de foto*</small>  
 
