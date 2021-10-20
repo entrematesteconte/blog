@@ -1,4 +1,4 @@
-import { getAllPostIds, getPostData } from "../../lib/posts"
+import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Link from 'next/link'
 import Date from '../../components/date'
@@ -6,14 +6,6 @@ import utilStyles from '../../styles/articles.module.css'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/contact'
 
-
-export async function getStaticPaths() {
-    const paths = getAllPostIds()
-    return {
-        paths,
-        fallback: false
-    }
-}
 
 export async function getStaticProps({ params }) {
     const postData = await getPostData(params.id)
@@ -25,15 +17,23 @@ export async function getStaticProps({ params }) {
     }
 }
 
-const urlEncode = encodeURI()
-console.log(urlEncode);
+
+export async function getStaticPaths() {
+    const paths = getAllPostIds()
+    return {
+        paths,
+        fallback: false
+    }
+}
+
+
 
 export default function Post({ postData }) {
     return (
         <>
             <Head>
                 <title>{postData.title}</title>
-                //Open graph
+
                 <meta property="og:url" content="http://localhost:3000/posts/ejemplo1" />
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content={postData.title} />
@@ -50,13 +50,14 @@ export default function Post({ postData }) {
                 </div>
                 <br />
                 <div className={utilStyles.headingMd} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-
                 <div className={utilStyles.backToHome}>
                     <Link href="/">
                         <a>← Volver a inicio</a>
                     </Link>
                 </div>
             </article>
+
+
             <Footer id="footer"></Footer>
 
             <style jsx>{`
