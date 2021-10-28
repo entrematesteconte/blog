@@ -74,7 +74,7 @@ export default function Contact() {
                                 </div>
                                 <div className="row">
                                     <div className="col-md-3"><i className="fas fa-phone-alt"></i></div>
-                                    <div className="col-md-9"><p>+59899123123</p></div>
+                                    <div className="col-md-9"><p>+59891241618</p></div>
                                 </div>
                                 <div className="row">
                                     <div className="col-md-3"><a href="https://www.instagram.com/entrematesteconte/?hl=es-la" target="_blank"><i className="fab fa-instagram"></i></a></div>
@@ -140,6 +140,7 @@ export default function Contact() {
                                 </div>
                                 <div className="row">
                                     <button
+                                        id="submit-button"
                                         className="submit-btn"
                                         type="submit">
                                         Enviar
@@ -187,15 +188,12 @@ export default function Contact() {
                     margin-bottom: 25px;
                 }
                 #contact-form .row button {
-                    border-radius: 35px;
+                    border-radius: 10px;
                     margin-bottom: 25px;
-                    width: 25%;
+                    width: 30%;
                     margin-left: auto;
                 }
-
-                @media (max-width: 992px) {
-                    
-                }
+        
 
                 @media (max-width: 768px) {
                     .row {

@@ -5,8 +5,10 @@ import Date from '../../components/date'
 import utilStyles from '../../styles/articles.module.css'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/contact'
-import Router from 'react-router'
-
+import {
+    FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon,
+    WhatsappShareButton, WhatsappIcon, LinkedinShareButton, LinkedinIcon
+} from 'next-share';
 
 export async function getStaticProps({ params }) {
     const postData = await getPostData(params.id)
@@ -29,7 +31,7 @@ export async function getStaticPaths() {
 
 
 export default function Post({ postData }) {
-    console.log(`https://entrematesteconte.vercel.app/posts/${postData.id}`)
+
     return (
         <>
             <Head>
@@ -41,12 +43,6 @@ export default function Post({ postData }) {
                 <meta property="og:description" content={postData.description} />
                 <meta property="og:image" content={`https://github.com/entrematesteconte/blog/blob/main/public${postData.image}?raw=true`} />
             </Head>
-
-            <div id="fb-root"></div>
-            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v12.0"
-                nonce="dHW9sZKe"></script>
-            <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
-
 
             <Navbar article></Navbar>
             <article className="container mt-5 mb-5" id="articulos">
@@ -63,14 +59,34 @@ export default function Post({ postData }) {
                     </Link>
                 </div><br />
 
-                <div class="fb-share-button" data-href={`https://entrematesteconte.vercel.app/posts/${postData.id}`}
-                    data-layout="button_count" data-size="large"><a target="_blank"
-                        href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fentrematesteconte.vercel.app%2Fposts%2F${postData.id}&amp;src=sdkpreparse`}
-                        class="fb-xfbml-parse-ignore">Compartir</a>
-                </div>
+                <p> Compartilo en tus redes: </p> <br />
 
-                <br />
-                <script type="IN/Share" data-url={`https://entrematesteconte.vercel.app/posts/${postData.id}`}></script>
+                <FacebookShareButton
+                    url={`https://entrematesteconte.vercel.app/posts/${postData.id}`}
+                    hashtag={'#entrematesteconte'}
+                >
+                    <FacebookIcon size={32} round />
+                </FacebookShareButton>
+
+                <TwitterShareButton
+                    url={`https://entrematesteconte.vercel.app/posts/${postData.id}`}
+                    title={postData.title}
+                >
+                    <TwitterIcon size={32} round />
+                </TwitterShareButton>
+
+                <LinkedinShareButton url={`https://entrematesteconte.vercel.app/posts/${postData.id}`}>
+
+                    <LinkedinIcon size={32} round />
+                </LinkedinShareButton>
+
+                <WhatsappShareButton
+                    url={`https://entrematesteconte.vercel.app/posts/${postData.id}`}
+                    title={postData.title}
+                    separator=":: "
+                >
+                    <WhatsappIcon size={32} round />
+                </WhatsappShareButton>
             </article>
 
 

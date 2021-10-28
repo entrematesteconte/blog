@@ -10,9 +10,10 @@ p img {
 
 /* Articles style begin*/
 
-#articulos {
+#art-ent {
   text-align: center;
   padding: 15px;
+  font-weight: bold;
 }
 
 li {
@@ -66,6 +67,7 @@ li .row {
 #citas {
   font-size: .7em;
   line-height: 12px;
+  text-align: start;
 }
 
 sup a {
@@ -74,6 +76,7 @@ sup a {
 }
 
 @media (max-width: 768px) {
+
   .container {
     padding: 0;
   }
@@ -91,8 +94,8 @@ sup a {
 
   .articles li a {
     border: 1px;
-    border-radius: 20px;
-    box-shadow: 5px 5px 15px white;
+    border-radius: 0;
+    box-shadow: none;
     text-decoration: none;
     color: inherit;
   }

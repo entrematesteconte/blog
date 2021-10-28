@@ -5,7 +5,7 @@ export default function Navbar({ home, article }) {
     return (
         <>
             {home ? (
-                <nav className="navbar navbar-expand-md navbar-light bg-light">
+                <nav className="navbar navbar-expand-md navbar-light">
                     <div className="container">
                         <a className="navbar-brand" href="/"><img src="/images/logo_horizontal_72ppp.png" /></a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -36,7 +36,7 @@ export default function Navbar({ home, article }) {
                 </nav>
 
             ) : article ? (
-                <nav className="navbar navbar-expand-md navbar-light bg-light">
+                <nav className="navbar navbar-expand-md navbar-light">
                     <div className="container">
                         <Link href="/">
                             <a className="navbar-brand" href=""><img src="/images/logo_horizontal_72ppp.png" /></a>
@@ -69,7 +69,7 @@ export default function Navbar({ home, article }) {
                 </nav>
 
             ) : (
-                <nav className="navbar navbar-expand-md navbar-light bg-light">
+                <nav className="navbar navbar-expand-md navbar-light">
                     <div className="container">
                         <Link href="/">
                             <a className="navbar-brand" href=""><img src="/images/logo_horizontal_72ppp.png" /></a>
@@ -107,6 +107,12 @@ export default function Navbar({ home, article }) {
             <style jsx>{`
             .navbar-brand img {
                 height: 6vh;
+            }
+
+            @media (max-width: 768px) {
+                .navbar-brand {
+                    padding-left: 8px;
+                }
             }
             `}</style>
         </>
