@@ -52,9 +52,6 @@ export default function Navbar({ home, article }) {
                                         <a className="nav-link active" aria-current="page" href="">Inicio</a>
                                     </Link>
                                 </li>
-                                {/* <li className="nav-item" className={styles.navitem}>
-                                    <a className="nav-link" href="#">Artículos</a>
-                                </li> */}
                                 <li className="nav-item" className={styles.navitem}>
                                     <Link href="/about">
                                         <a className="nav-link" href="">About</a>
@@ -90,11 +87,6 @@ export default function Navbar({ home, article }) {
                                         <a className="nav-link" href="">Artículos</a>
                                     </Link>
                                 </li>
-                                {/* <li className="nav-item" className={styles.navitem}>
-                                    <Link href="/about">
-                                    <a className="nav-link" href="">About</a>
-                                    </Link>
-                                </li> */}
                                 <li className="nav-item" className={styles.navitem}>
                                     <a className="nav-link" href="#contact" tabindex="-1" aria-disabled="true">Contacto</a>
                                 </li>

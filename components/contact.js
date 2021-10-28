@@ -141,7 +141,7 @@ export default function Contact() {
                                 <div className="row">
                                     <button
                                         id="submit-button"
-                                        className="submit-btn"
+                                        className="submit-btn btn btn-light"
                                         type="submit">
                                         Enviar
                                     </button>
