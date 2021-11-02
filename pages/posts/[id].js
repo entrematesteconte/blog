@@ -37,7 +37,7 @@ export default function Post({ postData }) {
             <Head>
                 <title>{postData.title}</title>
 
-                <meta property="og:url" content={`"https://entrematesteconte.vercel.app/posts/${postData.id}`} /> //Acá usar el url a compartir
+                <meta property="og:url" content={`https://www.entrematesteconte.com/posts/${postData.id}`} />
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content={postData.title} />
                 <meta property="og:description" content={postData.description} />
@@ -62,26 +62,26 @@ export default function Post({ postData }) {
                 <p> Compartilo en tus redes: </p> <br />
 
                 <FacebookShareButton
-                    url={`https://entrematesteconte.vercel.app/posts/${postData.id}`}
+                    url={`https://www.entrematesteconte.com/posts/${postData.id}`}
                     hashtag={'#entrematesteconte'}
                 >
                     <FacebookIcon size={32} round />
                 </FacebookShareButton>
 
                 <TwitterShareButton
-                    url={`https://entrematesteconte.vercel.app/posts/${postData.id}`}
+                    url={`https://www.entrematesteconte.com/posts/${postData.id}`}
                     title={postData.title}
                 >
                     <TwitterIcon size={32} round />
                 </TwitterShareButton>
 
-                <LinkedinShareButton url={`https://entrematesteconte.vercel.app/posts/${postData.id}`}>
+                <LinkedinShareButton url={`https://www.entrematesteconte.com/posts/${postData.id}`}>
 
                     <LinkedinIcon size={32} round />
                 </LinkedinShareButton>
 
                 <WhatsappShareButton
-                    url={`https://entrematesteconte.vercel.app/posts/${postData.id}`}
+                    url={`https://www.entrematesteconte.com/posts/${postData.id}`}
                     title={postData.title}
                     separator=":: "
                 >
