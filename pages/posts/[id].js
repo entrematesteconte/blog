@@ -59,7 +59,7 @@ export default function Post({ postData }) {
                     </Link>
                 </div><br />
 
-                <p> Compartilo en tus redes: </p> <br />
+                <p><b> Compartilo en tus redes:</b> </p> <br />
 
                 <FacebookShareButton
                     url={`https://www.entrematesteconte.com/posts/${postData.id}`}

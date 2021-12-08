@@ -2,7 +2,7 @@
 title: 'La forestación y el agua'
 author: 'Franco Sotelo'
 date: '2021-10-20'
-image: '/covers/3.jpg'
+image: '/covers/1.jpg'
 description: 'La forestación y el agua es un tema que consideramos muy importante y el cual ha generado incertidumbre y polémica en gran parte de la población. Intentaremos aclarar aquí algunos puntos importantes.'
 ---
 Por **Franco Sotelo**.
