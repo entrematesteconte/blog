@@ -1,5 +1,5 @@
 ---
-title: 'El árbol y sus efectos en el microclima'
+title: 'El árbol y sus efectos en el microclima y en la productividad del forraje'
 author: 'Franco Sotelo'
 date: '2021-12-08'
 image: '/covers/2.jpeg'

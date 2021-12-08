@@ -36,7 +36,7 @@ export default function Home({ allPostsData }) {
         <main className={styles.main}>
           <br></br>
           <section className="articles">
-            <h2 id="art-ent">Artículos y entrevistas</h2><br />
+            <h2 id="art-ent-title">Artículos y entrevistas</h2><br />
             <ul>
               {allPostsData.map(({ id, date, title, image, description }) => (
                 <li key={id}>
@@ -53,7 +53,7 @@ export default function Home({ allPostsData }) {
                             <small className={utilStyles.lightText}>
                               <Date dateString={date} />
                             </small>
-                            <br /><br />
+                            <br />
                             <p>{description}</p>
                           </div>
                         </div>
