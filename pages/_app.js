@@ -1,9 +1,27 @@
 import Head from 'next/head'
 import '../styles/globals.css'
+import Script from 'next/script'
+
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      {/* Google analytics */}
+      <Script
+      strategy='lazyOnload'
+      src={`https://www.googletagmanager.com/gtag/js?id=G-RFL4RR2K47`}
+      />
+      <Script
+      strategy='lazyOnload'>
+        {
+          `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          
+          gtag('config', 'G-RFL4RR2K47');`
+        }
+      </Script>
+
       <Head>
         <link rel="icon" href="/favicon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
