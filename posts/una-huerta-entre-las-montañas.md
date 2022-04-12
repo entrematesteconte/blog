@@ -5,7 +5,7 @@ date: '2022-04-11'
 image: '/covers/huerta-recortada.jpeg'
 description: 'La forestación y el agua es un tema que consideramos muy importante y el cual ha generado incertidumbre y polémica en gran parte de la población. Intentaremos aclarar aquí algunos puntos importantes.'
 ---
-Por **Franco Sotelo**.
+Por **Franco Sotelo y Piero Cardinal**.
 
 ![Huerta entre las montañas](/covers/huerta-recortada.jpeg)  
 <small> *Cajón del Azul, El Bolsón, Argentina* </small>
