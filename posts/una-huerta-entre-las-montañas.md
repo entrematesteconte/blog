@@ -13,6 +13,8 @@ Por **Franco Sotelo y Piero Cardinal**.
 <br>
 
 ## **Gimme Shelter**
+<br>
+
 A fines del año pasado, y luego de varias idas y vueltas, decidimos con algunos amigos realizar un viaje por el sur argentino, por la región patagónica. A la hora de organizar la ruta, y con la idea de hacer algún trekking, elegimos un destino muy recomendado en internet: el refugio Cajón del Azul, ubicado en la localidad de El Bolsón.
 
 <br>

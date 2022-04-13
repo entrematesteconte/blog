@@ -16,7 +16,7 @@ export default function about() {
                 <h2>Franco Sotelo, Ing. Agrónomo</h2><br />
                 <div className="row">
                     <div className="col-md">
-                        <Image src="/images/about-me.jpg" width={512} height={683} className="border-radius"></Image>
+                        <Image src="/images/quien-soy-cut.jpeg" width={512} height={683} className="border-radius"></Image>
                     </div>
                     <div className="col-md">
                         <h2>Sobre mi</h2><br />
